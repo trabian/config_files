@@ -1,3 +1,13 @@
+# cd
+alias ..="cd .."
+alias cdd="cd -"
+alias cds="cd ~/cms/sites"
+
+function take {
+  mkdir $1
+  cd $1
+}
+
 # Finder
 alias o="open . &"
 alias ff="open -a Firefox"
@@ -16,15 +26,33 @@ function gg() {
   git commit -v -a -m "$*"
 }
 
+function gbt() {
+  git branch --track $2 $1/$2
+  git checkout $2
+}
+
+function grf() {
+  rm $1
+  git checkout $1
+}
+
+# ls
+alias l="ls -laGh"
+
 # Rails
 alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias cuc="cucumber -r features"
+alias ss="./script/server"
+alias sg="./script/generate"
+alias sp="./script/plugin install"
+alias sc="./script/console"
+alias r="rake"
 
 # Top
 alias tu="top -o cpu" # cpu
 alias tm="top -o vsize" # memory
 
 # Alias
-alias ea="$EDITOR ~/.aliases"
-alias ra="source ~/.aliases"
+alias reload="source ~/.aliases"
+alias ea="mate -w ~/.aliases && reload"
