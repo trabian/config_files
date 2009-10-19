@@ -10,6 +10,7 @@ alias giv="sudo gem install -v"
 alias g="git status"
 alias gadd="git add -u && git add . && git status"
 alias gci="git pull --rebase && rake && git push"
+alias gconf="$EDITOR .git/config"
 
 function gg() {
   git commit -v -a -m "$*"
