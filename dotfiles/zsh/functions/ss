@@ -1,0 +1,6 @@
+if [[ -a script/server ]] 
+then
+  ruby script/server -u $*
+else
+  echo "./script/server does not exist. Maybe this isn't a rails project?"
+fi

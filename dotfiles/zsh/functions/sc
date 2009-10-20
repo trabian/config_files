@@ -1,0 +1,6 @@
+if [[ -a script/console ]] 
+then
+  ruby script/console $*
+else
+  echo "./script/console does not exist. Maybe this isn't a rails project?"
+fi
