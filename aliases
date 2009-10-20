@@ -1,6 +1,9 @@
 # cd
 alias ..="cd .."
 alias cdd="cd -"
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
 
 # Finder
 alias o="open . &"
@@ -12,8 +15,12 @@ alias giv="sudo gem install -v"
 
 # Git
 alias g="git status"
+alias gp="git push"
+alias gl="git pull"
 alias gadd="git add -u && git add . && git status"
 alias gci="git pull --rebase && rake && git push"
+alias gco="git checkout"
+alias gm="git merge"
 alias gconf="$EDITOR .git/config"
 
 function gg() {
@@ -40,6 +47,7 @@ alias cuc="cucumber -r features"
 alias sg="./script/generate"
 alias sp="./script/plugin install"
 alias r="rake"
+alias rr="touch tmp/restart.txt"
 
 # Top
 alias tu="top -o cpu" # cpu
