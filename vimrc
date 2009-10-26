@@ -50,6 +50,8 @@ if has("autocmd")
     \   exe "normal g`\"" |
     \ endif
 
+  autocmd BufNewFile,BufRead *.xml source ~/.vim/ftplugin/xml.vim
+
   augroup END
 
 else
@@ -150,7 +152,6 @@ if executable("ack")
 endif
 
 " Color scheme
-colorscheme vividchalk
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -161,7 +162,7 @@ set numberwidth=5
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
 
-" Tab completion options
+
 " (only complete to the longest unambiguous match, and show a menu)
 set completeopt=longest,menu
 set wildmode=list:longest,list:full
@@ -174,3 +175,22 @@ set smartcase
 " Tags
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
+colorscheme vividchalk
+
+" bind \d to toggle file browser
+" requires NERDTree
+nmap <D-d> :NERDTreeToggle<CR>
+
+" bind command-/ to toggle comment
+" requires NERD Commenter to be installed
+nmap <D-/> ,c<space>
+vmap <D-/> ,c<space>
+imap <D-/> <C-O>,c<space>
+
+let g:fuzzy_matching_limit=70
+let g:fuzzy_ignore = "*.log"
+let g:fuzzy_celing=20000
+
+" binds \ t to textmate-style fuzzy finder
+map <leader>t :FuzzyFinderTextMate<CR>
+map <leader>b :FuzzyFinderBuffer<CR>
