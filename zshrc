@@ -35,4 +35,4 @@ export PATH=~/bin:/usr/local/git/libexec/git-core/:/opt/local/bin:/usr/local/bin
 
 source ~/.dotfiles/zsh/base.zsh
 
-cdpath=(~ ~/cms/sites ~/dev/clients ~/dev/cms/sites)
+cdpath=(~ ~/cms/sites ~/dev/clients ~/dev/cms/sites ~/Desktop/Inbox)

@@ -204,3 +204,20 @@ map <D-6> :tabn 6<CR>
 map <D-7> :tabn 7<CR>
 map <D-8> :tabn 8<CR>
 map <D-9> :tabn 9<CR>
+
+nmap <D-]> >>
+vmap <D-]> >>
+imap <D-]> <C-O>>>
+
+nmap <D-[> <<
+vmap <D-[> <<
+imap <D-[> <C-O><<
+
+imap <C-l> <Space>=><Space>
+
+nmap <leader>v :vsplit<CR> <C-w><C-w>
+nmap <leader>s :split<CR> <C-w><C-w>
+
+nmap <leader>w <C-w><C-w>_
+
+inoremap <D-CR> <C-O>o

@@ -1,3 +1,7 @@
 # Edit commands in Vi mode
-set editing-mode vi
-set keymap vi
+# set editing-mode vi
+# set keymap vi
+
+# Edit commands in emacs mode
+set editing-mode emacs
+set keymap emacs
