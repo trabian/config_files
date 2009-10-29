@@ -221,3 +221,6 @@ nmap <leader>s :split<CR> <C-w><C-w>
 nmap <leader>w <C-w><C-w>_
 
 inoremap <D-CR> <C-O>o
+
+" \F to startup an ack search
+map <leader>F :Ack<space>
