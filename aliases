@@ -15,10 +15,12 @@ alias giv="sudo gem install -v"
 
 # Git
 alias g="git status"
+alias gb="git branch"
 alias gp="git push"
 alias gl="git pull"
 alias gadd="git add -u && git add . && git status"
 alias gci="git pull --rebase && rake && git push"
+alias gc="git commit"
 alias gco="git checkout"
 alias gm="git merge"
 alias gconf="$EDITOR .git/config"
