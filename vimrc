@@ -77,7 +77,8 @@ set expandtab
 set laststatus=2
 
 " \ is the leader character
-let mapleader = "\\"
+"let mapleader = "\\"
+let mapleader = ","
 
 " Edit the README_FOR_APP (makes :R commands work)
 map <Leader>R :e doc/README_FOR_APP<CR>
@@ -224,3 +225,16 @@ inoremap <D-CR> <C-O>o
 
 " \F to startup an ack search
 map <leader>F :Ack<space>
+
+function! RunSpec(args)
+  if exists("b:rails_root") && filereadable(b:rails_root . "/script/spec")
+    let spec = b:rails_root . "/script/spec"
+  else
+    let spec = "spec"
+  end
+  let cmd = ":! " . spec . " % -cfn " . a:args
+  execute cmd
+endfunction
+
+map !s :call RunSpec("-l " . <C-r>=line('.')<CR>)
+map !S :call RunSpec("")
