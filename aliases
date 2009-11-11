@@ -58,3 +58,6 @@ alias tu="top -o cpu" # cpu
 # Alias
 alias reload="source ~/.aliases"
 alias ea="mate -w ~/.aliases && reload"
+
+# VIM
+alias e="mvim"
