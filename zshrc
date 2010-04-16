@@ -6,7 +6,7 @@ compinit
 setopt auto_cd
 
 # use vim as an editor
-export EDITOR=vim
+export EDITOR=emacs
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then
@@ -35,4 +35,4 @@ export PATH=~/bin:/usr/local/git/libexec/git-core/:/opt/local/bin:/usr/local/bin
 
 source ~/.dotfiles/zsh/base.zsh
 
-cdpath=(~ ~/cms/sites ~/dev/clients ~/dev/cms/sites ~/Desktop/Inbox ~/dev/oscu)
+cdpath=(~ ~/cms/sites ~/cms ~/dev/clients ~/dev/cms/sites ~/Desktop/Inbox ~/dev/oscu)

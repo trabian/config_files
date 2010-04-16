@@ -1,3 +1,6 @@
+export CMS_DEV_ROOT="/Users/mattdean/cms/trabian_cms"
+export CMS_GEM_DEV_ROOT="/Users/mattdean/cms/gems"
+
 # cd
 alias ..="cd .."
 alias cdd="cd -"
@@ -21,7 +24,9 @@ alias gl="git pull"
 alias gadd="git add -u && git add . && git status"
 alias gci="git pull --rebase && rake && git push"
 alias gc="git commit"
+alias gca="git commit -a"
 alias gco="git checkout"
+alias gcb="git checkout -b"
 alias gm="git merge"
 alias gconf="$EDITOR .git/config"
 
@@ -59,5 +64,33 @@ alias tu="top -o cpu" # cpu
 alias reload="source ~/.aliases"
 alias ea="mate -w ~/.aliases && reload"
 
+alias m="mate ."
+
 # VIM
 alias e="mvim"
+
+# CMS
+function cmsinit() {
+  export CMS_DB_USER='root'
+  export CMS_DB_PASSWORD='' 
+  env ARCHFLAGS="-arch x86_64" rails -m http://github.com/trabian/rails-templates/raw/master/cms.rb $1
+}
+
+# CMS (Local)
+function cmsinit_local() {
+  export CMS_DB_USER='root'
+  export CMS_DB_PASSWORD='' 
+  env ARCHFLAGS="-arch x86_64" rails -m ~/cms/rails-templates/cms.rb $1
+}
+
+function bundle() {
+  env ARCHFLAGS="-arch x86_64" /usr/bin/bundle $*
+}
+
+###########
+# Tunnels #
+###########
+alias hfcut='ssh -l root -L 7800:209.184.80.21:22 70.85.82.36 -N &'
+alias hfcu='ssh -p 7800 hfcu'
+
+if [[ -s /Users/mattdean/.rvm/scripts/rvm ]] ; then source /Users/mattdean/.rvm/scripts/rvm ; fi
