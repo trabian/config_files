@@ -74,5 +74,6 @@ alias blkt='ssh blktun -N &'
 
 
 
+alias m='mate .'
 
 if [[ -s /Users/mattdean/.rvm/scripts/rvm ]] ; then source /Users/mattdean/.rvm/scripts/rvm ; fi
