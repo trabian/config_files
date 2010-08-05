@@ -73,6 +73,7 @@ alias hfcu='ssh -p 7800 hfcu'
 alias blkt='ssh blktun -N &'
 
 
+source ~/.ec2/keys.txt
 
 alias m='mate .'
 
