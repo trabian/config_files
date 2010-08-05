@@ -72,6 +72,7 @@ alias hfcu='ssh -p 7800 hfcu'
 
 alias blkt='ssh blktun -N &'
 
+export GEM_EDITOR='mate'
 
 source ~/.ec2/keys.txt
 
