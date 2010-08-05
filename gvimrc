@@ -1,5 +1,5 @@
 " Font
-set guifont=Monaco:h13.00
+set guifont=Monaco:h12.00
 
 " No audible bell
 set vb
@@ -9,6 +9,8 @@ set guioptions-=T
 
 " Use console dialogs
 set guioptions+=c
+
+set lines=50 columns=200
 
 " Local config
 if filereadable(".gvimrc.local")

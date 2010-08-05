@@ -76,6 +76,8 @@ set expandtab
 " Always display the status line
 set laststatus=2
 
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+
 " \ is the leader character
 "let mapleader = "\\"
 let mapleader = ","
@@ -246,3 +248,10 @@ endfunction
 
 map !s :call RunSpec("-l " . <C-r>=line('.')<CR>)
 map !S :call RunSpec("")
+
+if has("gui_running")
+  set fuoptions=maxvert,maxhorz
+  au GUIEnter * set fullscreen
+endif
+
+call pathogen#runtime_append_all_bundles()
