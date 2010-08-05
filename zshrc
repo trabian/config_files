@@ -36,3 +36,5 @@ export PATH=~/bin:/usr/local/sbin:/usr/local/git/libexec/git-core/:/opt/local/bi
 source ~/.dotfiles/zsh/base.zsh
 
 cdpath=(~ ~/cms/sites ~/cms ~/dev/clients ~/dev/cms/sites ~/Desktop/Inbox ~/dev/oscu)
+
+if [[ -s /Users/mattdean/.rvm/scripts/rvm ]] ; then source /Users/mattdean/.rvm/scripts/rvm ; fi
