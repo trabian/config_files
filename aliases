@@ -60,14 +60,19 @@ alias tu="top -o cpu" # cpu
 alias reload="source ~/.aliases"
 alias ea="mate -w ~/.aliases && reload"
 
-function bundle() {
-  env ARCHFLAGS="-arch x86_64" /usr/bin/bundle $1
-}
+# function bundle() {
+#   env ARCHFLAGS="-arch x86_64" /usr/bin/bundle $1
+# }
 
 ###########
 # Tunnels #
 ###########
 alias hfcut='ssh -l root -L 7800:209.184.80.21:22 70.85.82.36 -N &'
 alias hfcu='ssh -p 7800 hfcu'
+
+alias blkt='ssh blktun -N &'
+
+
+
 
 if [[ -s /Users/mattdean/.rvm/scripts/rvm ]] ; then source /Users/mattdean/.rvm/scripts/rvm ; fi
