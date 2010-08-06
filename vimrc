@@ -204,8 +204,8 @@ let g:fuzzy_ignore = "*.log"
 let g:fuzzy_celing=20000
 
 " binds \ t to textmate-style fuzzy finder
-map <leader>t :FuzzyFinderTextMate<CR>
-map <leader>b :FuzzyFinderBuffer<CR>
+map <leader>ff :FuzzyFinderTextMate<CR>
+map <leader>fb :FuzzyFinderBuffer<CR>
 
 map <D-1> :tabn 1<CR>
 map <D-2> :tabn 2<CR>
@@ -260,3 +260,8 @@ endif
 call pathogen#runtime_append_all_bundles()
 
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
+
+map <buffer> <silent> <Leader>td <Plug>ToggleDone
+map <buffer> <silent> <Leader>tc <Plug>ShowContext
+map <buffer> <silent> <Leader>ta <Plug>ShowAll
+map <buffer> <silent> <Leader>tp <Plug>FoldAllProjects
