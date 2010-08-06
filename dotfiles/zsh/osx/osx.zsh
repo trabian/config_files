@@ -3,7 +3,8 @@
 export PATH=~/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
 export SVN_EDITOR='mate -w'
 export GIT_EDITOR='mate -wl1'
-export EDITOR='mate -w'
+# export EDITOR='mate -w'
+export EDITOR='mvim -f'
 export GEM_OPEN_EDITOR='mate'
 export LESSEDIT='mate -l %lm %f'
 

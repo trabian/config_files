@@ -77,6 +77,7 @@ set expandtab
 set laststatus=2
 
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+set statusline+=%{rvm#statusline()}
 
 " \ is the leader character
 "let mapleader = "\\"
@@ -249,9 +250,13 @@ endfunction
 map !s :call RunSpec("-l " . <C-r>=line('.')<CR>)
 map !S :call RunSpec("")
 
+map <Leader>r <Plug>MakeGreen
+
 if has("gui_running")
   set fuoptions=maxvert,maxhorz
-  au GUIEnter * set fullscreen
+" au GUIEnter * set fullscreen
 endif
 
 call pathogen#runtime_append_all_bundles()
+
+autocmd BufNewFile,BufRead *_spec.rb compiler rspec
