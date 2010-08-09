@@ -7,3 +7,15 @@
 [submodule "vim/bundle/vim-ragtag"]
 	path = vim/bundle/vim-ragtag
 	url = git://github.com/tpope/vim-ragtag.git
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "vim/bundle/vim-rake"]
+	path = vim/bundle/vim-rake
+	url = git://github.com/tpope/vim-rake.git
+[submodule "vim/bundle/vim-cucumber"]
+	path = vim/bundle/vim-cucumber
+	url = git://github.com/tpope/vim-cucumber.git
+[submodule "vim/bundle/vim-haml"]
+	path = vim/bundle/vim-haml
+	url = git://github.com/tpope/vim-haml.git
