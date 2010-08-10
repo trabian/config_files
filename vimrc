@@ -1,6 +1,11 @@
+call pathogen#runtime_append_all_bundles()
+
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
+"Don't warn before switching away from an unsaved buffer
+set hidden
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -109,10 +114,9 @@ map <Leader>h :set invhls <CR>
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
@@ -257,7 +261,6 @@ if has("gui_running")
 " au GUIEnter * set fullscreen
 endif
 
-call pathogen#runtime_append_all_bundles()
 
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
@@ -265,3 +268,7 @@ map <buffer> <silent> <Leader>td <Plug>ToggleDone
 map <buffer> <silent> <Leader>tc <Plug>ShowContext
 map <buffer> <silent> <Leader>ta <Plug>ShowAll
 map <buffer> <silent> <Leader>tp <Plug>FoldAllProjects
+
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
