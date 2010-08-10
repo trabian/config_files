@@ -31,3 +31,9 @@
 [submodule "vim/bundle/git-vim"]
 	path = vim/bundle/git-vim
 	url = git://github.com/motemen/git-vim.git
+[submodule "vim/bundle/coffee-script"]
+	path = vim/bundle/coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/lusty"]
+	path = vim/bundle/lusty
+	url = git://github.com/sjbach/lusty.git

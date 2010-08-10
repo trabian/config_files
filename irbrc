@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'interactive_editor'
+
 # print SQL to STDOUT
 if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
   require 'logger'
