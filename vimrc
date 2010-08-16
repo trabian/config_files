@@ -272,3 +272,14 @@ map <buffer> <silent> <Leader>tp <Plug>FoldAllProjects
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+
+function! HandleURI()
+  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
+  if s:uri != ""
+    let s:uri = escape (s:uri, "#?&;|%")
+    exec "!open \"" . s:uri . "\""
+  else
+    echo "No URI found in line."
+  endif
+endfunction
+map <Leader>w :call HandleURI()<CR>
