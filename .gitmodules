@@ -58,3 +58,6 @@
 [submodule "vim/bundle/textile"]
 	path = vim/bundle/textile
 	url = git://github.com/timcharper/textile.vim.git
+[submodule "vim/bundle/vim-nginx"]
+	path = vim/bundle/vim-nginx
+	url = git://github.com/clones/vim-nginx.git
