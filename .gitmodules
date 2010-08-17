@@ -55,3 +55,9 @@
 [submodule "vim/bundle/vim-scratch"]
 	path = vim/bundle/vim-scratch
 	url = git://github.com/duff/vim-scratch.git
+[submodule "vim/bundle/textile"]
+	path = vim/bundle/textile
+	url = git://github.com/timcharper/textile.vim.git
+[submodule "vim/bundle/vim-nginx"]
+	path = vim/bundle/vim-nginx
+	url = git://github.com/clones/vim-nginx.git
