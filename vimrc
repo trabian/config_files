@@ -1,4 +1,4 @@
-call pathogen#runtime_append_all_bundles()
+silent! call pathogen#runtime_append_all_bundles()
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -272,3 +272,6 @@ map <buffer> <silent> <Leader>tp <Plug>FoldAllProjects
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+
+let g:LustyExplorerSuppressRubyWarning = 1
+let g:LustyJugglerSuppressRubyWarning = 1
