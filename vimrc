@@ -1,4 +1,4 @@
-call pathogen#runtime_append_all_bundles()
+silent! call pathogen#runtime_append_all_bundles()
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -273,6 +273,7 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
+<<<<<<< HEAD
 function! HandleURI()
   let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
   if s:uri != ""
@@ -283,3 +284,9 @@ function! HandleURI()
   endif
 endfunction
 map <Leader>w :call HandleURI()<CR>
+
+compiler rubyunit
+nnoremap <Leader>fd :cf /tmp/autotest.txt<cr> :compiler rubyunit<cr>
+
+let g:LustyExplorerSuppressRubyWarning = 1
+let g:LustyJugglerSuppressRubyWarning = 1
