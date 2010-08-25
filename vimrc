@@ -289,3 +289,8 @@ nnoremap <Leader>fd :cf /tmp/autotest.txt<cr> :compiler rubyunit<cr>
 
 let g:LustyExplorerSuppressRubyWarning = 1
 let g:LustyJugglerSuppressRubyWarning = 1
+
+function! RestartRails()
+  exec "!touch tmp/restart.txt"
+endfunction
+map <Leader>rr :call RestartRails()<CR>
