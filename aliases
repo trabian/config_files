@@ -1,6 +1,8 @@
 export CMS_DEV_ROOT="/Users/mattdean/cms/trabian_cms"
 export CMS_GEM_DEV_ROOT="/Users/mattdean/cms/gems"
 
+export EDITOR='mate -w'
+
 # cd
 alias ..="cd .."
 alias cdd="cd -"
