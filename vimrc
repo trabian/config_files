@@ -92,21 +92,21 @@ let mapleader = ","
 map <Leader>R :e doc/README_FOR_APP<CR>
 
 " Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest 
-map <Leader>f :Rfunctionaltest 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
-map <Leader>sf :RSfunctionaltest 
+map <Leader>m :Rmodel
+map <Leader>c :Rcontroller
+map <Leader>v :Rview
+map <Leader>u :Runittest
+map <Leader>f :Rfunctionaltest
+map <Leader>tm :RTmodel
+map <Leader>tc :RTcontroller
+map <Leader>tv :RTview
+map <Leader>tu :RTunittest
+map <Leader>tf :RTfunctionaltest
+map <Leader>sm :RSmodel
+map <Leader>sc :RScontroller
+map <Leader>sv :RSview
+map <Leader>su :RSunittest
+map <Leader>sf :RSfunctionaltest
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
@@ -236,6 +236,9 @@ nmap <leader>s :split<CR> <C-w><C-w>
 
 nmap <leader>w <C-w><C-w>_
 
+
+
+
 inoremap <D-CR> <C-O>o
 
 " \F to startup an ack search
@@ -294,3 +297,22 @@ function! RestartRails()
   exec "!touch tmp/restart.txt"
 endfunction
 map <Leader>rr :call RestartRails()<CR>
+
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/#making-vim-more-useful
+nnoremap j gj
+nnoremap k gk
+
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+nnoremap ; :
+
+nnoremap <leader><Space> :%s/\s\+$//<cr>:let @/=''<CR>
+
+nnoremap <leader>v V`]
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
