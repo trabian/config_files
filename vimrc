@@ -192,6 +192,10 @@ set smartcase
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 colorscheme vividchalk
+"colorscheme molokai
+"let g:molokai_original = 1
+"colorscheme mustang
+"colorscheme clouds_midnight
 
 " bind \d to toggle file browser
 " requires NERDTree
