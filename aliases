@@ -71,6 +71,12 @@ alias m="mate ."
 # VIM
 alias e="mvim"
 
+# CD to a directory and open MVIM
+function cdmvim() {
+  cd $1
+  mvim .
+}
+
 # CMS
 function cmsinit() {
   export CMS_DB_USER='root'
