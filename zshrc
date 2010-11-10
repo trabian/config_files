@@ -37,4 +37,5 @@ source ~/.dotfiles/zsh/base.zsh
 
 cdpath=(~ ~/cms/sites ~/cms ~/dev/clients ~/dev/cms/sites ~/Desktop/Inbox ~/dev/oscu)
 
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
