@@ -13,7 +13,7 @@ set guioptions+=c
 
 set lines=50 columns=200
 
-set transparency=15
+set transparency=7
 
 " Local config
 if has("gui_macvim")
