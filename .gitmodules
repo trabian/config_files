@@ -76,3 +76,6 @@
 [submodule "vim/bundle/vim-slurper"]
 	path = vim/bundle/vim-slurper
 	url = git://github.com/alowe/vim-slurper.git
+[submodule "vim/bundle/zencoding-vim"]
+	path = vim/bundle/zencoding-vim
+	url = http://github.com/mattn/zencoding-vim.git
