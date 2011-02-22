@@ -59,6 +59,8 @@ if has("autocmd")
 
   augroup END
 
+  au BufNewFile,BufRead *.handlebars set filetype=html
+
 else
 
   set autoindent		" always set autoindenting on

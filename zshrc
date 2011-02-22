@@ -17,7 +17,7 @@ fi
 # bindkey -v
 
 # use incremental search
-bindkey ^R history-incremental-search-backward
+bindkey "^R" history-incremental-search-backward
 
 # expand functions in the prompt
 setopt prompt_subst
@@ -31,11 +31,10 @@ setopt histignoredups
 # keep more history
 export HISTSIZE=200
 
-export PATH=~/bin:/usr/local/sbin:/usr/local/git/libexec/git-core/:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin/:$EC2_HOME/bin:$PATH:~/dev/util/jruby/bin
+export PATH=~/bin:/usr/local/sbin:/usr/local/git/libexec/git-core:/usr/local/bin:/opt/local/bin:/usr/local/mysql/bin:$EC2_HOME/bin:$PATH:~/dev/util/jruby/bin
 
 source ~/.dotfiles/zsh/base.zsh
 
 cdpath=(~ ~/cms/sites ~/cms ~/dev/clients ~/dev/cms/sites ~/Desktop/Inbox ~/dev/oscu)
 
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
