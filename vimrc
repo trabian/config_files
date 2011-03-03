@@ -271,6 +271,8 @@ endif
 
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
+au BufRead,BufNewFile {Vagrantfile,Gemfile,Rakefile} set ft=ruby
+
 map <buffer> <silent> <Leader>td <Plug>ToggleDone
 map <buffer> <silent> <Leader>tc <Plug>ShowContext
 map <buffer> <silent> <Leader>ta <Plug>ShowAll
