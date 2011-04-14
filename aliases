@@ -107,6 +107,8 @@ alias blkt='ssh blktun -N &'
 
 export GEM_EDITOR='mate'
 
+export PATH=/usr/local/share/npm/bin:$PATH
+
 source ~/.ec2/keys.txt
 
 if [[ -s /Users/mattdean/.rvm/scripts/rvm ]] ; then source /Users/mattdean/.rvm/scripts/rvm ; fi
